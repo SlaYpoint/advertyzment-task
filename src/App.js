@@ -20,7 +20,7 @@ export default function App() {
   };
 
   return (
-    <div className="App">
+    <>
       <Navbar buttonHandler={buttonHandler} />
       <main>
         {loading ? (
@@ -35,6 +35,6 @@ export default function App() {
           </div>
         )}
       </main>
-    </div>
+    </>
   );
 }
