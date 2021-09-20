@@ -15,4 +15,20 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.grid-column-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  column-gap: 2rem;
+  row-gap: 3.5rem;
+  max-width: 50rem;
+  width: 100%;
+  margin: 0 auto;
+}
 
+@media screen and (max-width: 768px) {
+  .grid-column-layout {
+    grid-template-columns: 1fr;
+    max-width: 30rem;
+  }
+}
