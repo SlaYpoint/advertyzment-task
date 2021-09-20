@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./styles.css";
-import { Navbar, UserCard } from "./components";
+import { Navbar, UserCard, Toast } from "./components";
 import { getUsers } from "./helper/net-requests";
 import Loader from "react-loader-spinner";
 
@@ -26,7 +26,7 @@ export default function App() {
         {loading ? (
           <Loader type="Oval" color="#000" height={100} width={100} />
         ) : userData.length === 0 ? (
-          <div className="toast">Fetch Users To Display Profiles</div>
+          <Toast msg={"Click the button to display users"} />
         ) : (
           <div className="grid-column-layout p-1">
             {userData.map((user) => {

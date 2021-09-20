@@ -30,6 +30,22 @@ body {
   margin: 0 auto;
 }
 
+.toast-msg {
+  width: fit-content;
+  padding: 1rem 2rem 1rem 1rem;
+  margin: 2rem;
+  background: var(--primary);
+  color: var(--font-color-primary);
+  border-radius: 0.3rem;
+}
+
+.close {
+  font-weight: 600;
+  font-size: 20px;
+  float: right;
+  cursor: pointer;
+}
+
 .sub-text {
   color: var(--font-color-secondary);
 }

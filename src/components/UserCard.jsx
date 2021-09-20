@@ -1,7 +1,9 @@
-import React from "react";
-import { FaPlus } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaPlus, FaCheck } from "react-icons/fa";
 
 export const UserCard = ({ user }) => {
+  const [follow, setFollow] = useState(false);
+
   return (
     <div
       className="card-vertical default-container flex-items shadow-box"
@@ -24,9 +26,12 @@ export const UserCard = ({ user }) => {
           <p className="sub-text">{user.email}</p>
         </div>
         <div className="cta-container">
-          <button className="btn btn-icon btn-primary flex-items">
-            <FaPlus alt="cta-img" />
-            <span>Follow</span>
+          <button
+            className="btn btn-icon btn-primary flex-items"
+            onClick={() => setFollow(true)}
+          >
+            {follow ? <FaCheck alt="cta-img" /> : <FaPlus alt="cta-img" />}
+            <span>{follow ? "Following" : "Follow"}</span>
           </button>
         </div>
       </div>
